@@ -1,1 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Right side */
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hidden menu */
+.menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 10px 20px;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 8px 0;
+}
+
+/* Show menu when active */
+.menu.active {
+  display: block;
+}
 

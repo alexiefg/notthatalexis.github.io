@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="/assets/style.css">
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
-<script src="/script.js"></script>
 <body>
+  <script src="{{ '/script.js' | relative_url }}"></script>
   {% include header.html %}
   <main>
     {{ content }}

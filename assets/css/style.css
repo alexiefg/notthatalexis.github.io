@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between; /* Name left, hamburger right */
   align-items: center;
+  position: relative; /* For absolute positioning of menu */
 }
 
 .name {
@@ -17,24 +18,28 @@
   font-weight: bold;
 }
 
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* keep menu aligned to right */
+/* Menu wrapper to hold toggle and nav */
+.menu-wrapper {
   position: relative;
 }
 
+/* Hamburger icon */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Menu hidden by default */
 .menu {
-  display: none; /* hidden by default */
-  flex-direction: column;
-  gap: 10px;
-  background: #fff;
+  display: none; /* hidden initially */
   position: absolute;
-  top: 40px; /* below hamburger */
-  right: 0;
-  padding: 10px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  top: 100%; /* right below hamburger */
+  right: 0; /* align to top-right corner */
+  background: #fff;
   border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  flex-direction: column;
+  padding: 10px 20px;
   z-index: 1000;
 }
 
@@ -42,18 +47,19 @@
   text-decoration: none;
   color: #333;
   font-size: 16px;
+  padding: 5px 0;
 }
 
 .menu a:hover {
   color: #007BFF;
 }
 
-.menu-toggle {
-  font-size: 24px;
-  cursor: pointer;
+/* Show menu when active */
+.menu.active {
+  display: flex;
 }
 
-/* Bottom row: search bar */
+/* Search bar */
 .bottom-row {
   margin-top: 10px;
 }
@@ -66,15 +72,10 @@
   border-radius: 4px;
 }
 
-/* Mobile responsiveness */
+/* Responsive search */
 @media (max-width: 768px) {
   .search input[type="text"] {
     width: 100%;
   }
-}
-
-/* Show menu when active */
-.menu.active {
-  display: flex;
 }
 

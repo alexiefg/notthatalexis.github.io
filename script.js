@@ -1,10 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-  
-  if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".mobile-nav");
+
+  button.addEventListener("click", function () {
+    nav.style.display =
+      nav.style.display === "block" ? "none" : "block";
+  });
 });

@@ -1,25 +1,4 @@
 ---
 layout: default
 ---
-<header class="header">
-  <div class="top-row">
-    <div class="name">Notthatalexis</div>
-    <!-- Hamburger menu toggle -->
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <!-- Navigation menu -->
-    <nav class="menu" id="menu">
-      <a href="#">Fashion</a>
-      <a href="#">Design</a>
-      <a href="#">Travel</a>
-    </nav>
-  </div>
-
-  <div class="bottom-row">
-    <div class="search">
-      <input type="text" placeholder="Search...">
-    </div>
-  </div>
-</header>
-
-<!-- Link to JS -->
-<script src="script.js"></script>
+<p>Welcome to my site.</p>

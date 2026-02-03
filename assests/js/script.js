@@ -1,6 +1,6 @@
-console.log("SCRIPT LOADED");
-
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("menu script loaded");
+
   const button = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".mobile-nav");
 
